@@ -1,0 +1,13 @@
+#submit{
+    margin-top: 6%;
+    margin-left: 35%;
+    margin-bottom: 1%;
+}
+.container{
+    border: 13px solid #b8b4b4;
+    padding: 10px;
+    box-shadow: 5px 10px 5px 10px #b8b4b4;
+    width: max-content;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}

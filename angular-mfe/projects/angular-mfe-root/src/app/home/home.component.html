@@ -1,0 +1,7 @@
+<br>
+<button #showbtn class="fs-3 ms-2 border-0 font-weight-bold" (click)="isClicked = true">&#9776;</button>
+<div class="sidenav" id="sidenav" [style.width]="isClicked ? '90px' : '0px'">
+    <button #clsbtn class="closebtn btn btn-danger" (click)="isClicked = false">X</button>
+    <button title="Employee" (click)="setActive('employee'); goEmployee()" [class.active]="isActive('employee')" ><i class="bi bi-person-circle"></i></button>
+    <button title="Project" (click)="setActive('project'); goProject()" [class.active]="isActive('project')"><i class="bi bi-mortarboard-fill"></i></button>
+</div>

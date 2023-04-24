@@ -1,0 +1,25 @@
+<h3 class="text-center mt-3">Employee-Project Details</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Project ID</th>
+            <th scope="col">Project Name</th>
+            <th scope="col">Project Description</th>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Employee Email</th>
+            <th scope="col">Employee Phone number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empProjDetail of assignedProd">
+            <td>{{empProjDetail.projectId}}</td>
+            <td>{{empProjDetail.projectDetail.projectName}}</td>
+            <td>{{empProjDetail.projectDetail.description}}</td>
+            <td>{{empProjDetail.employeeId}}</td>
+            <td>{{empProjDetail.employeeDetail.firstName}} {{empProjDetail.employeeDetail.lastName}}</td>
+            <td>{{empProjDetail.employeeDetail.email}}</td>
+            <td>{{empProjDetail.employeeDetail.phone}}</td>
+        </tr>
+    </tbody>
+</table>

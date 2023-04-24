@@ -1,0 +1,27 @@
+<div class="container-fluid container p-5">
+    <h3 class="text-center">New Project</h3>
+    <form [formGroup]="projectForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group">
+            <label class="py-2 mx-5"><b>Project ID<sup class="text-danger">*</sup></b></label>
+            <input [class.is-invalid]="projectID?.invalid && projectID?.touched" formControlName="projectID" type="number" class="form-control w-75 mx-5">
+            <small class="text-danger mx-5" [class.d-none]="projectID?.valid || projectID?.untouched">Project ID is required</small>
+        </div>
+        <div class="form-group">
+            <label class="py-2 mx-5"><b>Project Name<sup class="text-danger">*</sup></b></label>
+            <input [class.is-invalid]="projectName?.invalid && projectName?.touched" formControlName="projectName" type="text" class="form-control w-75 mx-5">
+            <div *ngIf="projectName?.invalid && projectName?.touched">
+                <small *ngIf="projectName?.errors?.['required']" class="text-danger mx-5">First Name is required</small>
+                <small *ngIf="projectName?.errors?.['minlength']" class="text-danger mx-5">Minimum of 3 characters is required</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="py-2 mx-5"><b>Description<sup class="text-danger">*</sup></b></label>
+            <textarea [class.is-invalid]="description?.invalid && description?.touched" formControlName="description" type="text" class="form-control w-75 mx-5"></textarea>
+            <div *ngIf="description?.invalid && description?.touched">
+                <small *ngIf="description?.errors?.['required']" class="text-danger mx-5">Description is required</small>
+                <small *ngIf="description?.errors?.['minlength']" class="text-danger mx-5">Minimum of 25 characters is required</small>
+            </div>
+        </div>
+        <button class="btn btn-primary text-center justifycontent-center" id="submit" type="submit" [disabled]="projectForm.invalid">Add Project</button>
+    </form>
+</div>

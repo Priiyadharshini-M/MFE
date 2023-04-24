@@ -1,0 +1,224 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "firstName": "Priiya",
+      "lastName": "Dharshini",
+      "email": "priiya303@gmail.com",
+      "phone": 7845741761,
+      "address": "Chennai"
+    },
+    {
+      "id": 2,
+      "firstName": "Ravi",
+      "lastName": "Rahul",
+      "email": "ravi@gmail.com",
+      "phone": 9865056032,
+      "address": "Pollachi"
+    },
+    {
+      "id": 3,
+      "firstName": "Priya",
+      "lastName": "Manikandan",
+      "email": "priiya273@gmail.com",
+      "phone": 9087689067,
+      "address": "Palani"
+    },
+    {
+      "id": 4,
+      "firstName": "Vallikkannu",
+      "lastName": "Manikandan",
+      "email": "valli@gmail.com",
+      "phone": 9976709425,
+      "address": ""
+    },
+    {
+      "id": 5,
+      "firstName": "Manikandan",
+      "lastName": "Ramasamy",
+      "email": "mani@gmail.com",
+      "phone": 9942016187,
+      "address": ""
+    },
+    {
+      "id": 6,
+      "firstName": "Mallika",
+      "lastName": "Bala",
+      "email": "malika@gmail.com",
+      "phone": 9764356789,
+      "address": "Coimbatore"
+    },
+    {
+      "id": 7,
+      "firstName": "Bala",
+      "lastName": "Subramani",
+      "email": "bala@gmail.com",
+      "phone": 7908678907,
+      "address": ""
+    },
+    {
+      "id": 8,
+      "firstName": "Gautam",
+      "lastName": "Bala",
+      "email": "gautam@gmail.com",
+      "phone": 6789098765,
+      "address": ""
+    },
+    {
+      "id": 9,
+      "firstName": "Varunika",
+      "lastName": "Shree",
+      "email": "varunika@gmail.com",
+      "phone": 8907654321,
+      "address": "Madurai"
+    },
+    {
+      "id": 10,
+      "firstName": "Shiva",
+      "lastName": "Shree",
+      "email": "shiva@gmail.com",
+      "phone": 7689032145,
+      "address": "Karur"
+    },
+    {
+      "id": 11,
+      "firstName": "Preethi",
+      "lastName": "Jai",
+      "email": "preethi@gmail.com",
+      "phone": 6543289076,
+      "address": ""
+    },
+    {
+      "firstName": "Carie",
+      "lastName": "Nickie",
+      "phone": "9087890987",
+      "email": "carie@gmail.com",
+      "address": "Madurai",
+      "id": 12
+    },
+    {
+      "employeeID": 17,
+      "firstName": "pri",
+      "lastName": "la",
+      "phone": "7890765456",
+      "email": "priii@gmail.com",
+      "address": "",
+      "id": 13
+    }
+  ],
+  "project": [
+    {
+      "id": 100,
+      "projectName": "Savvas",
+      "description": "This needs WCAG accessibility testing."
+    },
+    {
+      "id": 101,
+      "projectName": "Testnav",
+      "description": "This needs WCAG accessibility testing."
+    },
+    {
+      "id": 102,
+      "projectName": "GRT",
+      "description": "Features enhancement of the existing GRT application"
+    },
+    {
+      "id": 103,
+      "projectName": "STC",
+      "description": "Releasing Beta version of STC application"
+    },
+    {
+      "id": 104,
+      "projectName": "ADC",
+      "description": "Development process"
+    },
+    {
+      "id": 105,
+      "projectName": "ITC",
+      "description": "Release Beta Version for current year."
+    },
+    {
+      "id": 106,
+      "projectName": "Android",
+      "description": "Adding extra features of android users."
+    },
+    {
+      "id": 107,
+      "projectName": "Swolt",
+      "description": "Development process"
+    },
+    {
+      "id": 108,
+      "projectName": "IRT",
+      "description": "Releasing Beta version of IRT application"
+    },
+    {
+      "id": 109,
+      "projectName": "WCAG Test",
+      "description": "Accessibility enchancement process"
+    },
+    {
+      "id": 110,
+      "projectName": "WBC",
+      "description": "Development process"
+    },
+    {
+      "id": 112,
+      "projectName": "JAVA",
+      "description": "Features enhancement of the existing JAVA application"
+    },
+    {
+      "projectID": 1000,
+      "projectName": "Testing",
+      "description": "It is the testing process...",
+      "id": 113
+    }
+  ],
+  "assignedProjects": [
+    {
+      "projectId": 100,
+      "employeeId": 1,
+      "id": 1
+    },
+    {
+      "projectId": 105,
+      "employeeId": 7,
+      "id": 2
+    },
+    {
+      "projectId": 103,
+      "employeeId": 9,
+      "id": 4
+    },
+    {
+      "projectId": 110,
+      "employeeId": 3,
+      "id": 5
+    },
+    {
+      "projectId": 106,
+      "employeeId": 2,
+      "id": 6
+    },
+    {
+      "projectId": 107,
+      "employeeId": 11,
+      "id": 7
+    },
+    {
+      "projectId": 107,
+      "employeeId": 12,
+      "id": 8
+    },
+    {
+      "projectId": 113,
+      "employeeId": 5,
+      "id": 9
+    },
+    {
+      "projectId": 100,
+      "employeeId": 11,
+      "id": 10
+    }
+  ]
+}

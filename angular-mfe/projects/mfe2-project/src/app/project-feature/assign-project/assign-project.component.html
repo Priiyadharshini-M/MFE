@@ -1,0 +1,18 @@
+<div class="container-fluid container p-5">
+    <h3 class="text-center">Assign Project</h3>
+    <form [formGroup]="projectAssignForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group">
+            <label class="py-2 mx-5"><b>Project ID</b></label>
+            <input formControlName="projectId" type="number" class="form-control w-75 mx-5">
+        </div>
+        <div class="form-group">
+            <label class="py-2 mx-5"><b>Employee ID<sup class="text-danger">*</sup></b></label>
+            <input [class.is-invalid]="employeeId?.invalid && employeeId?.touched" formControlName="employeeId"
+                type="number" class="form-control w-75 mx-5">
+            <div *ngIf="employeeId?.invalid && employeeId?.touched">
+                <small *ngIf="employeeId?.errors?.['required']" class="text-danger mx-5">Employee ID is required</small>
+            </div>
+        </div>
+        <button class="btn btn-primary text-center justifycontent-center" id="submit" type="submit" [disabled]="projectAssignForm.invalid">Assign Project</button>
+    </form>
+</div>
