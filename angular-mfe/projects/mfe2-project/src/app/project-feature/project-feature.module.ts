@@ -10,7 +10,7 @@ import { EmployeeProjectDetailsComponent } from './employee-project-details/empl
 import { ProjectFeatureRoutingModule } from './project-feature-routing.module';
 import { ProjectFeatureComponent } from './project-feature.component';
 import { ProjectFeatureService } from './project-feature.service';
-import { assignedProjectReducer } from './state/project.reducer';
+import { assignedProjectReducer } from 'projects/ngrx/src/public-api';
 
 
 @NgModule({

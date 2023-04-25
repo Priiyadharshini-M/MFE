@@ -42,7 +42,7 @@ const routes: Routes = [
   },
   {
     path:'',
-    redirectTo:'/employee/mfe1',
+    redirectTo:'/project/mfe2',
     pathMatch:'full'
   },
   {

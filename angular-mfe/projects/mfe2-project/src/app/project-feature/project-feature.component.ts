@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable, combineLatest, map } from 'rxjs';
 import { ProjectFeatureService } from './project-feature.service';
-import { getAllProjectDetails } from './state/project.action';
+// import { getAllProjectDetails } from './state/project.action';
+import { getAllProjectDetails } from 'projects/ngrx/src/public-api';
 
 @Component({
   selector: 'app-project-feature',
@@ -24,7 +25,6 @@ export class ProjectFeatureComponent implements OnInit {
     this.projectEmployeeDetails = combineLatest([this.projects, this.employees, this.assignedProjects]).pipe(
       map(([project, employee, assignedProj]) => {
         return assignedProj.map((asp: any) => {
-          console.log('asppp', asp);
           return {
             ...asp,
             projectDetail : project.find((proj: any) => proj.id === asp.projectId),

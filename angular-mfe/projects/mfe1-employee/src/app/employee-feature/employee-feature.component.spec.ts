@@ -4,12 +4,14 @@ import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 import { EmployeeFeatureComponent } from './employee-feature.component';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('EmployeeFeatureComponent', () => {
   let component: EmployeeFeatureComponent;
   let fixture: ComponentFixture<EmployeeFeatureComponent>;
   let router : Router
   let result : any
+  let newInitialState : any
   let employee = [
     {
       id:17,
@@ -42,9 +44,34 @@ describe('EmployeeFeatureComponent', () => {
   ]
 
   beforeEach(async () => {
+    const initialState = {
+      assignedProd : {
+        assignedProjects: []
+      }
+    }
+    newInitialState = {
+      assignedProd : {
+        assignedProjects : of([{
+          projectId:110,
+          employeeId:1,
+          projectDetail : {
+            projectName : 'SVS',
+            description : 'This is SVS project. This is a angular project.'
+          },
+          employeeDetail : {
+            firstName : 'Sanjeev',
+            lastName : 'Gaurav',
+            email : 'sanjeev@gmail.com',
+            phone : '8976578905'
+          }
+        }])
+      }
+    }
+
     await TestBed.configureTestingModule({
       declarations: [ EmployeeFeatureComponent ],
-      imports: [ HttpClientTestingModule, RouterTestingModule.withRoutes([]) ]
+      imports: [ HttpClientTestingModule, RouterTestingModule.withRoutes([]) ],
+       providers: [provideMockStore({initialState: newInitialState})]
     })
     .compileComponents();
 
@@ -89,6 +116,20 @@ describe('EmployeeFeatureComponent', () => {
       result = data
     })
     expect(result.length).toBe(employee.length);
+  })
+
+  it('it should log the assigned employees', () => {
+    component.assignedEmployees();
+    newInitialState.assignedProd.assignedProjects.subscribe((details: any) => {
+      console.log('details', details);
+      console.log('details222', component.assignedProjectEmployee);
+      expect(component.assignedProjectEmployee).toEqual(details);
+    })
+  })
+
+  it('show all employees', () => {
+    component.allEmployees();
+    expect(component.showAssignedEmployee).toBeFalsy()
   })
 
 });

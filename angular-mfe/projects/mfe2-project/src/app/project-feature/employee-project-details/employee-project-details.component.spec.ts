@@ -51,6 +51,7 @@ describe('EmployeeProjectDetailsComponent', () => {
   it('it should log the assigned projects', () => {
     newInitialState.assignedProd.assignedProjects.subscribe((details: any) => {
       console.log('details', details);
+      console.log('details 2', component.assignedProd)
       expect(component.assignedProd).toEqual(details);
     })
   })
