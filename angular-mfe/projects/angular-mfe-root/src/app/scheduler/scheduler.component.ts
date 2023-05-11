@@ -1,5 +1,5 @@
-import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
-import { AgendaService, DayService, EventSettingsModel, MonthService, ResourceDirective, ResourcesDirective, ScheduleComponent, TimeScaleModel, WeekService, WorkWeekService } from '@syncfusion/ej2-angular-schedule';
+import { Component, ElementRef, ViewEncapsulation } from '@angular/core';
+import { AgendaService, DayService, EventSettingsModel, MonthService, ResourceDirective, ResourcesDirective, TimeScaleModel, WeekService, WorkWeekService } from '@syncfusion/ej2-angular-schedule';
 
 @Component({
   selector: 'app-scheduler',
@@ -10,6 +10,9 @@ import { AgendaService, DayService, EventSettingsModel, MonthService, ResourceDi
 })
 export class SchedulerComponent {
   constructor(private elementRef: ElementRef) {}
+  // public onPopupOpen(args: any) {
+  //   args.cancel = true;
+  // }
   onCheckChange(check: boolean, event: any) {
     const ele = this.elementRef.nativeElement.querySelector('.e-quick-popup-wrapper')
     if(check) {
@@ -52,7 +55,6 @@ export class SchedulerComponent {
   
   findInfoByDate(date: Date): any {
     var result =  this.infos.find((info : any) => info.date.getTime() === date.getTime());
-    console.log('result,', result);
     return result
   }
 
